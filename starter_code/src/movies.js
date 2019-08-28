@@ -1,13 +1,38 @@
 /* eslint no-restricted-globals: 'off' */
 
 // Iteration 1: All rates average - Get the average of all rates with 2 decimals 
+function ratesAverage(movies) {
 
- 
+    let x= movies.reduce((sum, curr) => {
+        return sum += curr.rate
+    }, 0);
+    return x / movies.length
+    
+}
+
+
+
+
+
 // Iteration 2: Drama movies - Get the average of Drama Movies
 
-
+function dramaMoviesRate(movies){
+ let filtered = movies.filter((a) => a.genre.includes("Drama"));
+ let x= filtered.reduce((sum, curr) => {
+    return sum += curr.rate
+}, 0)
+if(filtered <=0){
+return 0
+}else {
+    let avg = x / filtered.length
+    console.log(avg)
+    return avg.toFixed(2)
+}
+}
 // Iteration 3: Ordering by duration - Order by time duration, ascending (in growing order)
-
+function orderByDuration(){
+    return 0
+}
 
 // Iteration 4: Steven Spielberg. The best? - How many movies did STEVEN SPIELBERG direct
 
